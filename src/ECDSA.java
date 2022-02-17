@@ -38,7 +38,7 @@ import org.json.JSONObject;
 
 import static src.Utils.*;
 
-public class ECCSignature {
+public class ECDSA {
     private static final String CURVE = "secp256r1"; //"secp256k1";
     private static final String KEY_ALGO = "EC";
     private static final String HASHSIGN_ALGO = "SHA256withECDSAinP1363Format"; //"SHA256withECDSA";
@@ -114,19 +114,19 @@ public class ECCSignature {
             
             System.out.println(result);    
         } catch (NoSuchAlgorithmException ex) {
-            Logger.getLogger(ECCSignature.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(ECDSA.class.getName()).log(Level.SEVERE, null, ex);
         } catch (InvalidAlgorithmParameterException ex) {
-            Logger.getLogger(ECCSignature.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(ECDSA.class.getName()).log(Level.SEVERE, null, ex);
         } catch (InvalidKeyException ex) {
-            Logger.getLogger(ECCSignature.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(ECDSA.class.getName()).log(Level.SEVERE, null, ex);
         } catch (SignatureException ex) {
-            Logger.getLogger(ECCSignature.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(ECDSA.class.getName()).log(Level.SEVERE, null, ex);
         } 
     }
 
     private static void sign_test() {
         try {
-            ECCSignature ecSig = new ECCSignature();
+            ECDSA ecSig = new ECDSA();
             
             System.out.println("\n---Signature Generation---");
             JSONObject obj = ecSig.sender();
@@ -135,17 +135,17 @@ public class ECCSignature {
             boolean result = ecSig.receiver(obj);
             System.out.println(result);
         } catch (NoSuchAlgorithmException ex) {
-            Logger.getLogger(ECCSignature.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(ECDSA.class.getName()).log(Level.SEVERE, null, ex);
         } catch (InvalidAlgorithmParameterException ex) {
-            Logger.getLogger(ECCSignature.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(ECDSA.class.getName()).log(Level.SEVERE, null, ex);
         } catch (InvalidKeyException ex) {
-            Logger.getLogger(ECCSignature.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(ECDSA.class.getName()).log(Level.SEVERE, null, ex);
         } catch (UnsupportedEncodingException ex) {
-            Logger.getLogger(ECCSignature.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(ECDSA.class.getName()).log(Level.SEVERE, null, ex);
         } catch (SignatureException ex) {
-            Logger.getLogger(ECCSignature.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(ECDSA.class.getName()).log(Level.SEVERE, null, ex);
         } catch (InvalidKeySpecException ex) {
-            Logger.getLogger(ECCSignature.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(ECDSA.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 
