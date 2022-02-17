@@ -1,5 +1,16 @@
 package src;
 
+/**
+ * Implementation of Advanced Encryption Standard (AES), original name is Rijndael  
+ * 
+ * AES is  is a specification for the encryption of electronic data established by 
+ * the U.S. National Institute of Standards and Technology in 2001.
+ * 
+ * AES is implemented in javax.crypto.Cipher 
+ * https://docs.oracle.com/javase/7/docs/api/javax/crypto/Cipher.html
+ * 
+ * 
+ */
 import javax.crypto.SecretKey;
 import javax.crypto.spec.IvParameterSpec;
 import javax.crypto.BadPaddingException;

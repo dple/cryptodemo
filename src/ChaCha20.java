@@ -1,5 +1,19 @@
 package src;
 
+/**
+ * Implementation of ChaCha20, a variant of Salsa20. 
+ * The both ciphers were designed by Daniel Bernstein in 2005 and 2008, resp. 
+ * 
+ * Both ciphers are built on a pseudorandom function based on add-rotate-XOR (ARX)
+ * operations that makes them more secure against timing attacks. 
+ * 
+ * ChaCha20 is implemented in javax.crypto.Cipher 
+ * https://docs.oracle.com/javase/7/docs/api/javax/crypto/Cipher.html
+ * 
+ * @author: Phong Le (le.duc.phong@gmail.com)
+ * 
+ */
+
 import javax.crypto.Cipher;
 import javax.crypto.SecretKey;
 import javax.crypto.spec.ChaCha20ParameterSpec;

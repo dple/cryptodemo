@@ -1,5 +1,20 @@
 package src;
 
+/**
+ * Implementation of ECDSA, a digital signature from elliptic curve cryptography. 
+ * 
+ * ECDSA is built on the group of points of elliptic curves, it thus offers the 
+ * smaller size of signature and keys compared to RSA signatures. This property
+ * makes it fit well with constraint resources devices.
+ * 
+ * 
+ * ECDSA is implemented in java.security.Signature 
+ * https://docs.oracle.com/javase/7/docs/api/java/security/Signature.html
+ * 
+ * @author: Phong Le (le.duc.phong@gmail.com)
+ * 
+ */
+
 import java.io.UnsupportedEncodingException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
